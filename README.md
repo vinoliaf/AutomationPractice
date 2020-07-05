@@ -18,7 +18,7 @@ Operating system: Windows(64-bit) and MAC OS
 Steps to run the tests
 Please make sure to have all the tools and libraries mentioned in the "Tools And Environment" section.
 
-Step-1: Import the project into intellij
+Step-1: Clone the repository from https://github.com/SophiaSathiamoorthy/CarTaxCheck into intellij
 
 Step-2: Use the following maven commands to run the tests.
 
