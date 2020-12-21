@@ -49,6 +49,9 @@ public class IndexPage extends Utils {
     @FindBy(how = How.CSS, using = "h1.page-heading > span.cat-name")
     public static WebElement summerDressesPageHeading;
 
+    @FindBy(how = How.CSS, using = "div.product-count")
+    public static WebElement searchListText;
+
 
     public void selectAnyDress() throws InterruptedException {
         actions.moveToElement(anyDress).click().perform();
@@ -94,5 +97,11 @@ public class IndexPage extends Utils {
         waitForElement(summerDressesPageHeading,2);
         return summerDressesPageHeading.getText();
     }
+
+    public String searchCountText() throws InterruptedException {
+        waitForElement(searchListText,2);
+        return searchListText.getText();
+    }
+
 
 }
