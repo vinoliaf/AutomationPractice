@@ -1,97 +1,58 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UserStory1.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UserStory2.feature");
 formatter.feature({
-  "line": 1,
-  "name": "User Story 1",
-  "description": "As a user if there is an item already inside my basket\nI want to be able to delete the item from the basket page\nSo that I can see the basket is empty\n\nACC\nShopping cart has delete button\nitem is removed from basket /cart\nbanner must display your shopping cart it empty",
-  "id": "user-story-1",
-  "keyword": "Feature"
-});
-formatter.before({
-  "duration": 4649676009,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 18,
-  "name": "user able to delete an item from shopping cart",
-  "description": "",
-  "id": "user-story-1;user-able-to-delete-an-item-from-shopping-cart",
-  "type": "scenario",
-  "keyword": "Scenario",
+  "line": 2,
+  "name": "User Story 2",
+  "description": "As a user i want to select summer dresses option from the navigation menu\nSo that I can view an item from the summer collection\n\nAcceptance-Criteria\non mouse hover button \u0027WOMAN\u0027,sub navigation options will appear\nSummer items only display inside the search results",
+  "id": "user-story-2",
+  "keyword": "Feature",
   "tags": [
     {
-      "line": 17,
+      "line": 1,
       "name": "@FeatureAutomationTest"
     }
   ]
 });
+formatter.before({
+  "duration": 5012734845,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 10,
+  "name": "User able to navigate to summer dresses from menu WOMAN",
+  "description": "",
+  "id": "user-story-2;user-able-to-navigate-to-summer-dresses-from-menu-woman",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
 formatter.step({
-  "line": 19,
-  "name": "I have an item already in my shopping basket",
+  "line": 11,
+  "name": "I am on the home page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 20,
-  "name": "I go to shopping basket",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 21,
-  "name": "I delete an item",
+  "line": 12,
+  "name": "I navigate to summer dresses from menu WOMAN",
   "keyword": "When "
 });
 formatter.step({
-  "line": 22,
-  "name": "the item has to be removed from my shopping cart",
+  "line": 13,
+  "name": "I landed on the summer dresses page",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 23,
-  "name": "a banner saying \"Your shopping cart is empty.\" is displayed",
-  "keyword": "And "
-});
 formatter.match({
-  "location": "UserStory1Steps.iHaveAnItemAlreadyInMyShoppingBasket()"
+  "location": "UserStory2Steps.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 1520275531,
+  "duration": 147352668,
   "status": "passed"
 });
 formatter.match({
-  "location": "UserStory1Steps.iGoToShoppingBasket()"
+  "location": "UserStory2Steps.iNavigateToSummerDressesFromMenuWOMAN()"
 });
 formatter.result({
-  "duration": 2557159213,
+  "duration": 35305836643,
   "status": "passed"
 });
 formatter.match({
-  "location": "UserStory1Steps.iDeleteAnItem()"
-});
-formatter.result({
-  "duration": 82038199,
-  "status": "passed"
-});
-formatter.match({
-  "location": "UserStory1Steps.theItemHasToBeRemovedFromMyShoppingCart()"
-});
-formatter.result({
-  "duration": 23762,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Your shopping cart is empty.",
-      "offset": 17
-    }
-  ],
-  "location": "UserStory1Steps.aBannerSayingIsDisplayed(String)"
-});
-formatter.result({
-  "duration": 1792278631,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 92767347,
-  "status": "passed"
-});
+  "location": "UserStory2Steps.iLandedOnTheSummerDressesPage()"
 });
