@@ -1,17 +1,23 @@
 package helpers;
 
-import java.io.*;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import stepDefinitions.Hooks;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
 
-public class Utils {
-    public static String fs = File.separator;
+public class Utils extends Hooks {
     public static HashMap<String, List<String>> context = new HashMap<String, List<String>>();
+
+    public Utils() throws IOException {
+    }
 
     /**
      * This is the method to read the config.properties file
@@ -26,51 +32,19 @@ public class Utils {
         return property;
     }
 
-    public static String readFile(String fileName) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
-        try {
-            StringBuilder sb = new StringBuilder();
-            String line = br.readLine();
-            while (line != null) {
-                sb.append(line);
-                sb.append("\n");
-                line = br.readLine();
-            }
-            return sb.toString();
-        } finally {
-            br.close();
-        }
+    public void waitForElement(WebElement element, long seconds) {
+        WebDriverWait wait = new WebDriverWait(driver, seconds);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    public static List<String> readFileInList(String fileName) throws IOException {
-        List<String> content = new ArrayList<String>();
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
-        try {
-            String line = br.readLine();
-            while (line != null) {
-                content.add(line);
-                line = br.readLine();
-            }
-            return content;
-        } finally {
-            br.close();
-        }
+    public void implicitWait(){
+        driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
     }
 
-    public static List<String> matchPatterns(String fileContent) throws IOException {
-        List<String> listOfRegNumbers = new ArrayList<String>();
-        List<String> patterns = new ArrayList<>();
-        patterns.add("\\s[A-Z][A-Z]\\d\\d[A-Z][A-Z][A-Z]");
-        patterns.add("\\s[A-Z][A-Z]\\d\\d\\s[A-Z][A-Z][A-Z]");
-        for (int i = 0; i < patterns.size(); i++) {
-            Pattern p = Pattern.compile(patterns.get(i));
-            boolean found = p.matcher(fileContent).lookingAt();
-            Matcher matcher = p.matcher(fileContent);
-            while (matcher.find()) {
-                listOfRegNumbers.add(matcher.group(0).trim());
-            }
-        }
-        return listOfRegNumbers;
+
+    public void waitForFrame(WebElement frame) {
+        WebDriverWait wait=new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
     }
 
     public static void setContext(String key, List<String> value) {

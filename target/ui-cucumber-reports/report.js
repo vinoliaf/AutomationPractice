@@ -1,168 +1,67 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("test.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UserStory1.feature");
 formatter.feature({
   "line": 1,
-  "name": "CarTaxCheck test",
-  "description": "",
-  "id": "cartaxcheck-test",
+  "name": "User Story 1",
+  "description": "As a user if there is an item already inside my basket\nI want to be able to delete the item from the basket page\nSo that I can see the basket is empty\n\nACC\nShopping cart has delete button\nitem is removed from basket /cart\nbanner must display your shopping cart it empty",
+  "id": "user-story-1",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "line": 4,
-  "name": "carcheck test",
-  "description": "",
-  "id": "cartaxcheck-test;carcheck-test",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 3,
-      "name": "@FeatureAutomationTest"
-    }
-  ]
-});
-formatter.step({
-  "line": 5,
-  "name": "I use the input file \"\u003cinputFile\u003e\"",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "we get the regex from the file",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "I search for the regex in \"\u003cWebsite\u003e\" website",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 8,
-  "name": "the result should match the details in the output file \"\u003coutputFileName\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 9,
-  "name": "",
-  "description": "",
-  "id": "cartaxcheck-test;carcheck-test;",
-  "rows": [
-    {
-      "cells": [
-        "inputFile",
-        "Website",
-        "outputFileName"
-      ],
-      "line": 10,
-      "id": "cartaxcheck-test;carcheck-test;;1"
-    },
-    {
-      "cells": [
-        "car_input.txt",
-        "",
-        "car_output.txt"
-      ],
-      "line": 11,
-      "id": "cartaxcheck-test;carcheck-test;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.before({
-  "duration": 1576601284,
+  "duration": 4821063131,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 11,
-  "name": "carcheck test",
+  "line": 12,
+  "name": "Delete button is present on the shopping cart",
   "description": "",
-  "id": "cartaxcheck-test;carcheck-test;;2",
+  "id": "user-story-1;delete-button-is-present-on-the-shopping-cart",
   "type": "scenario",
-  "keyword": "Scenario Outline",
+  "keyword": "Scenario",
   "tags": [
     {
-      "line": 3,
+      "line": 11,
       "name": "@FeatureAutomationTest"
     }
   ]
 });
 formatter.step({
-  "line": 5,
-  "name": "I use the input file \"car_input.txt\"",
-  "matchedColumns": [
-    0
-  ],
+  "line": 13,
+  "name": "I have an item already in my shopping basket",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "we get the regex from the file",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 7,
-  "name": "I search for the regex in \"\" website",
-  "matchedColumns": [
-    1
-  ],
+  "line": 14,
+  "name": "I go to shopping basket",
   "keyword": "When "
 });
 formatter.step({
-  "line": 8,
-  "name": "the result should match the details in the output file \"car_output.txt\"",
-  "matchedColumns": [
-    2
-  ],
+  "line": 15,
+  "name": "I should see a delete button",
   "keyword": "Then "
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "car_input.txt",
-      "offset": 22
-    }
-  ],
-  "location": "StepDefs.iUseTheInputFile(String)"
+  "location": "UserStory1Steps.iHaveAnItemAlreadyInMyShoppingBasket()"
 });
 formatter.result({
-  "duration": 130326539,
+  "duration": 2429593264,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefs.weGetTheRegexFromTheFile()"
+  "location": "UserStory1Steps.iGoToShoppingBasket()"
 });
 formatter.result({
-  "duration": 224886,
+  "duration": 2114652177,
   "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "",
-      "offset": 27
-    }
-  ],
-  "location": "StepDefs.iSearchForTheRegexInWebsite(String)"
+  "location": "UserStory1Steps.iShouldSeeADeleteButton()"
 });
 formatter.result({
-  "duration": 9443281144,
+  "duration": 68394672,
   "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "car_output.txt",
-      "offset": 56
-    }
-  ],
-  "location": "StepDefs.theResultShouldMatchTheDetailsInTheOutputFile(String)"
-});
-formatter.result({
-  "duration": 3099133,
-  "error_message": "java.lang.AssertionError: The following records doesnt match[REGISTRATION,MAKE,MODEL,COLOR,YEAR, BW57BOF,Toyota,Yaris T2,Black,2010]\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat stepDefinitions.StepDefs.theResultShouldMatchTheDetailsInTheOutputFile(StepDefs.java:66)\n\tat ✽.Then the result should match the details in the output file \"car_output.txt\"(test.feature:8)\n",
-  "status": "failed"
 });
 formatter.after({
-  "duration": 95629049,
+  "duration": 91343004,
   "status": "passed"
 });
 });
