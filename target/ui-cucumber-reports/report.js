@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 5012734845,
+  "duration": 5314038112,
   "status": "passed"
 });
 formatter.scenario({
@@ -43,16 +43,25 @@ formatter.match({
   "location": "UserStory2Steps.iAmOnTheHomePage()"
 });
 formatter.result({
-  "duration": 147352668,
+  "duration": 97425486,
   "status": "passed"
 });
 formatter.match({
   "location": "UserStory2Steps.iNavigateToSummerDressesFromMenuWOMAN()"
 });
 formatter.result({
-  "duration": 35305836643,
+  "duration": 2691811069,
   "status": "passed"
 });
 formatter.match({
   "location": "UserStory2Steps.iLandedOnTheSummerDressesPage()"
+});
+formatter.result({
+  "duration": 77776742,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 88390447,
+  "status": "passed"
+});
 });

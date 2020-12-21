@@ -25,7 +25,7 @@ public class UserStory2Steps {
 
     @Then("^I landed on the summer dresses page$")
     public void iLandedOnTheSummerDressesPage() throws Throwable {
-        assertEquals("Incorrect banner text on shopping cart", "SUMMER DRESSES" , indexPage.summerDressesPageHeadingText() );
+        assertEquals("Incorrect banner text on shopping cart", "SUMMER DRESSES " , indexPage.summerDressesPageHeadingText() );
 
     }
 }

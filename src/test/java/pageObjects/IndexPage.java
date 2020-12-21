@@ -86,6 +86,7 @@ public class IndexPage extends Utils {
 
     public void navigateToSummerDresses() throws InterruptedException {
         actions.moveToElement(womenMenu).perform();
+        waitForElement(summerDressesMenu , 2);
         actions.moveToElement(summerDressesMenu).click().perform();
     }
 
