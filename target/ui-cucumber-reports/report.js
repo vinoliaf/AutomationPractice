@@ -7,61 +7,91 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4821063131,
+  "duration": 4649676009,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 12,
-  "name": "Delete button is present on the shopping cart",
+  "line": 18,
+  "name": "user able to delete an item from shopping cart",
   "description": "",
-  "id": "user-story-1;delete-button-is-present-on-the-shopping-cart",
+  "id": "user-story-1;user-able-to-delete-an-item-from-shopping-cart",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 11,
+      "line": 17,
       "name": "@FeatureAutomationTest"
     }
   ]
 });
 formatter.step({
-  "line": 13,
+  "line": 19,
   "name": "I have an item already in my shopping basket",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 14,
+  "line": 20,
   "name": "I go to shopping basket",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "I delete an item",
   "keyword": "When "
 });
 formatter.step({
-  "line": 15,
-  "name": "I should see a delete button",
+  "line": 22,
+  "name": "the item has to be removed from my shopping cart",
   "keyword": "Then "
+});
+formatter.step({
+  "line": 23,
+  "name": "a banner saying \"Your shopping cart is empty.\" is displayed",
+  "keyword": "And "
 });
 formatter.match({
   "location": "UserStory1Steps.iHaveAnItemAlreadyInMyShoppingBasket()"
 });
 formatter.result({
-  "duration": 2429593264,
+  "duration": 1520275531,
   "status": "passed"
 });
 formatter.match({
   "location": "UserStory1Steps.iGoToShoppingBasket()"
 });
 formatter.result({
-  "duration": 2114652177,
+  "duration": 2557159213,
   "status": "passed"
 });
 formatter.match({
-  "location": "UserStory1Steps.iShouldSeeADeleteButton()"
+  "location": "UserStory1Steps.iDeleteAnItem()"
 });
 formatter.result({
-  "duration": 68394672,
+  "duration": 82038199,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserStory1Steps.theItemHasToBeRemovedFromMyShoppingCart()"
+});
+formatter.result({
+  "duration": 23762,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Your shopping cart is empty.",
+      "offset": 17
+    }
+  ],
+  "location": "UserStory1Steps.aBannerSayingIsDisplayed(String)"
+});
+formatter.result({
+  "duration": 1792278631,
   "status": "passed"
 });
 formatter.after({
-  "duration": 91343004,
+  "duration": 92767347,
   "status": "passed"
 });
 });
