@@ -1,4 +1,4 @@
-#@FeatureAutomationTest
+@FeatureAutomationTest
 Feature: User Story 1
   As a user if there is an item already inside my basket
   I want to be able to delete the item from the basket page
