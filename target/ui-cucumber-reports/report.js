@@ -1,481 +1,209 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UserStory4.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("UserStory3.feature");
 formatter.feature({
-  "line": 1,
-  "name": "User Story 4",
-  "description": "As a user\nI want to create a new account\nSo that I can start buying items using my personal account\n\nAcceptance Criteria\n1. Form can only accept valid information\n2. Invalid information will give an error message\n3. Completing registration will take user to \"MY ACCOUNT\u0027 page\n4. User can see account name on top right",
-  "id": "user-story-4",
-  "keyword": "Feature"
-});
-formatter.scenarioOutline({
-  "line": 80,
-  "name": "User can see account name on top right",
-  "description": "",
-  "id": "user-story-4;user-can-see-account-name-on-top-right",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
+  "line": 2,
+  "name": "User Story 3",
+  "description": "As a user when searching for a summer dress\nI want to change the price range $16 - $20\nso that I see the search result change\n\nAcceptance Criteria\n1. slider changes the price range\n2. Search results are updated\n3. Items returned are within price range",
+  "id": "user-story-3",
+  "keyword": "Feature",
   "tags": [
     {
-      "line": 79,
+      "line": 1,
       "name": "@FeatureAutomationTest"
     }
   ]
 });
-formatter.step({
-  "line": 81,
-  "name": "I am on the create account page with random email address",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 82,
-  "name": "title as \"\u003ctitle\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 83,
-  "name": "first name as \"\u003cfirstName\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 84,
-  "name": "last name as \"\u003clastname\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 85,
-  "name": "password as \"\u003cpassword\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 86,
-  "name": "date of Birth as \"\u003cDOB\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 87,
-  "name": "sign in for newspaper as \"\u003cnewspaper\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 88,
-  "name": "opt in for offers as \"\u003coffers\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 89,
-  "name": "address as \"\u003caddress\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 90,
-  "name": "city as \"\u003ccity\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 91,
-  "name": "state as \"\u003cstate\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 92,
-  "name": "postalCode as \"\u003cpostalCode\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 93,
-  "name": "country as \"\u003ccountry\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 94,
-  "name": "mobilePhone as \"\u003cmobilePhone\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 95,
-  "name": "I create an account",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 96,
-  "name": "I can see account name on top right \"\u003cfirstName\u003e \u003clastname\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 97,
-  "name": "",
-  "description": "",
-  "id": "user-story-4;user-can-see-account-name-on-top-right;",
-  "rows": [
-    {
-      "cells": [
-        "title",
-        "firstName",
-        "lastname",
-        "password",
-        "DOB",
-        "address",
-        "city",
-        "state",
-        "postalCode",
-        "country",
-        "mobilePhone"
-      ],
-      "line": 98,
-      "id": "user-story-4;user-can-see-account-name-on-top-right;;1"
-    },
-    {
-      "cells": [
-        "Mr",
-        "Test",
-        "User",
-        "abcdefg1234",
-        "22-June-1945",
-        "Leeds road",
-        "Leeds",
-        "Alabama",
-        "01123",
-        "United Status",
-        "07987654342"
-      ],
-      "line": 99,
-      "id": "user-story-4;user-can-see-account-name-on-top-right;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.before({
-  "duration": 5063328456,
+  "duration": 5114570637,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 99,
-  "name": "User can see account name on top right",
+  "line": 12,
+  "name": "slider changes the price range",
   "description": "",
-  "id": "user-story-4;user-can-see-account-name-on-top-right;;2",
+  "id": "user-story-3;slider-changes-the-price-range",
   "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 79,
-      "name": "@FeatureAutomationTest"
-    }
-  ]
+  "keyword": "Scenario"
 });
 formatter.step({
-  "line": 81,
-  "name": "I am on the create account page with random email address",
+  "line": 13,
+  "name": "I navigate to summer dresses from menu WOMAN",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 82,
-  "name": "title as \"Mr\"",
-  "matchedColumns": [
-    0
-  ],
+  "line": 14,
+  "name": "the price range is \"$16.00 - $32.00\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 83,
-  "name": "first name as \"Test\"",
-  "matchedColumns": [
-    1
-  ],
+  "line": 15,
+  "name": "I move the slider to \"$20\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 84,
-  "name": "last name as \"User\"",
-  "matchedColumns": [
-    2
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 85,
-  "name": "password as \"abcdefg1234\"",
-  "matchedColumns": [
-    3
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 86,
-  "name": "date of Birth as \"22-June-1945\"",
-  "matchedColumns": [
-    4
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 87,
-  "name": "sign in for newspaper as \"\u003cnewspaper\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 88,
-  "name": "opt in for offers as \"\u003coffers\u003e\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 89,
-  "name": "address as \"Leeds road\"",
-  "matchedColumns": [
-    5
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 90,
-  "name": "city as \"Leeds\"",
-  "matchedColumns": [
-    6
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 91,
-  "name": "state as \"Alabama\"",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 92,
-  "name": "postalCode as \"01123\"",
-  "matchedColumns": [
-    8
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 93,
-  "name": "country as \"United Status\"",
-  "matchedColumns": [
-    9
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 94,
-  "name": "mobilePhone as \"07987654342\"",
-  "matchedColumns": [
-    10
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 95,
-  "name": "I create an account",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 96,
-  "name": "I can see account name on top right \"Test User\"",
-  "matchedColumns": [
-    1,
-    2
-  ],
+  "line": 16,
+  "name": "the price range is changed to \"$16 -$20\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "UserStory4Steps.iAmOnTheCreateAccountPageWithRandomEmailAddress()"
+  "location": "UserStory2Steps.iNavigateToSummerDressesFromMenuWOMAN()"
 });
 formatter.result({
-  "duration": 3151782894,
+  "duration": 2387185633,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Mr",
-      "offset": 10
+      "val": "$16.00 - $32.00",
+      "offset": 20
     }
   ],
-  "location": "UserStory4Steps.titleAs(String)"
+  "location": "UserStory3Steps.thePriceRangeIs(String)"
 });
 formatter.result({
-  "duration": 58840231,
+  "duration": 71768640,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Test",
-      "offset": 15
-    }
-  ],
-  "location": "UserStory4Steps.firstNameAs(String)"
-});
-formatter.result({
-  "duration": 118868722,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "User",
-      "offset": 14
-    }
-  ],
-  "location": "UserStory4Steps.lastNameAs(String)"
-});
-formatter.result({
-  "duration": 120095972,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "abcdefg1234",
-      "offset": 13
-    }
-  ],
-  "location": "UserStory4Steps.passwordAs(String)"
-});
-formatter.result({
-  "duration": 144061789,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "22-June-1945",
-      "offset": 18
-    }
-  ],
-  "location": "UserStory4Steps.dateOfBirthAs(String)"
-});
-formatter.result({
-  "duration": 262441838,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "\u003cnewspaper\u003e",
-      "offset": 26
-    }
-  ],
-  "location": "UserStory4Steps.signInForNewspaperAs(String)"
-});
-formatter.result({
-  "duration": 60561,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "\u003coffers\u003e",
+      "val": "$20",
       "offset": 22
     }
   ],
-  "location": "UserStory4Steps.optInForOffersAs(String)"
+  "location": "UserStory3Steps.iMoveTheSliderTo(String)"
 });
 formatter.result({
-  "duration": 41079,
+  "duration": 121245124,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Leeds road",
-      "offset": 12
+      "val": "$16 -$20",
+      "offset": 31
     }
   ],
-  "location": "UserStory4Steps.addressAs(String)"
+  "location": "UserStory3Steps.thePriceRangeIsChangedTo(String)"
 });
 formatter.result({
-  "duration": 98858191,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Leeds",
-      "offset": 9
-    }
-  ],
-  "location": "UserStory4Steps.cityAs(String)"
-});
-formatter.result({
-  "duration": 75643680,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Alabama",
-      "offset": 10
-    }
-  ],
-  "location": "UserStory4Steps.stateAs(String)"
-});
-formatter.result({
-  "duration": 78290607,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "01123",
-      "offset": 15
-    }
-  ],
-  "location": "UserStory4Steps.postalcodeAs(String)"
-});
-formatter.result({
-  "duration": 75166625,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "United Status",
-      "offset": 12
-    }
-  ],
-  "location": "UserStory4Steps.countryAs(String)"
-});
-formatter.result({
-  "duration": 95103093,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "07987654342",
-      "offset": 16
-    }
-  ],
-  "location": "UserStory4Steps.mobilephoneAs(String)"
-});
-formatter.result({
-  "duration": 97669551,
-  "status": "passed"
-});
-formatter.match({
-  "location": "UserStory4Steps.iCreateAnAccount()"
-});
-formatter.result({
-  "duration": 1339915368,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Test User",
-      "offset": 37
-    }
-  ],
-  "location": "UserStory4Steps.iCanSeeAccountNameOnTopRight(String)"
-});
-formatter.result({
-  "duration": 65658085,
-  "status": "passed"
+  "duration": 49375805,
+  "error_message": "org.junit.ComparisonFailure: Incorrect price range on the summer dress page expected:\u003c$16[ -$2]0\u003e but was:\u003c$16[.00 - $32.0]0\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat stepDefinitions.UserStory3Steps.thePriceRangeIsChangedTo(UserStory3Steps.java:33)\n\tat ✽.Then the price range is changed to \"$16 -$20\"(UserStory3.feature:16)\n",
+  "status": "failed"
 });
 formatter.after({
-  "duration": 95637443,
+  "duration": 98972122,
   "status": "passed"
 });
+formatter.before({
+  "duration": 3977896074,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 18,
+  "name": "Search results are updated",
+  "description": "",
+  "id": "user-story-3;search-results-are-updated",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 19,
+  "name": "I navigate to summer dresses from menu WOMAN",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 20,
+  "name": "the price range is \"$16.00 - $32.00\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 21,
+  "name": "I move the slider to \"$20\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "the search results are updated",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "UserStory2Steps.iNavigateToSummerDressesFromMenuWOMAN()"
+});
+formatter.result({
+  "duration": 2221701237,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "$16.00 - $32.00",
+      "offset": 20
+    }
+  ],
+  "location": "UserStory3Steps.thePriceRangeIs(String)"
+});
+formatter.result({
+  "duration": 64280115,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "$20",
+      "offset": 22
+    }
+  ],
+  "location": "UserStory3Steps.iMoveTheSliderTo(String)"
+});
+formatter.result({
+  "duration": 148855312,
+  "status": "passed"
+});
+formatter.match({
+  "location": "UserStory3Steps.theSearchResultsAreUpdated()"
+});
+formatter.result({
+  "duration": 66946433,
+  "error_message": "java.lang.AssertionError: Incorrect search count on summer dresses\nExpected: a string containing \"Showing 1 of 1 items\"\n     but: was \"Showing 1 - 3 of 3 items\"\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat stepDefinitions.UserStory3Steps.theSearchResultsAreUpdated(UserStory3Steps.java:38)\n\tat ✽.Then the search results are updated(UserStory3.feature:22)\n",
+  "status": "failed"
+});
+formatter.after({
+  "duration": 96461717,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4411183739,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "Items returned are within price range",
+  "description": "",
+  "id": "user-story-3;items-returned-are-within-price-range",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 25,
+  "name": "I navigate to summer dresses from menu WOMAN",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 26,
+  "name": "the price range is \"$16.00 - $32.00\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 27,
+  "name": "I move the slider to \"$20\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 28,
+  "name": "the items returned are within price range",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "UserStory2Steps.iNavigateToSummerDressesFromMenuWOMAN()"
 });

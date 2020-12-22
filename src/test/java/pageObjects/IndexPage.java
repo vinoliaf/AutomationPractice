@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
 import stepDefinitions.Hooks;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class IndexPage extends Utils {
 
@@ -52,6 +54,17 @@ public class IndexPage extends Utils {
     @FindBy(how = How.CSS, using = "div.product-count")
     public static WebElement searchListText;
 
+    //User story 3
+
+    @FindBy(how = How.CSS, using = "#layered_price_range")
+    public static WebElement priceRange;
+
+    @FindBy(how = How.CSS, using = "#layered_price_slider div")
+    public static WebElement slider;
+
+    @FindBy(how = How.CSS, using = ".right-block span[itemprop='price'][class$=product-price]")
+    public static List<WebElement> priceList;
+
 
     public void selectAnyDress() throws InterruptedException {
         actions.moveToElement(anyDress).click().perform();
@@ -78,30 +91,50 @@ public class IndexPage extends Utils {
     }
 
     public boolean isCartSummaryPresent() throws InterruptedException {
-        waitForElement(shoppingCartAlert,2);
+        waitForElement(shoppingCartAlert, 2);
         return shoppingCartAlert.isDisplayed();
     }
 
     public String cartAlertText() throws InterruptedException {
-        waitForElement(shoppingCartAlert,2);
+        waitForElement(shoppingCartAlert, 2);
         return shoppingCartAlert.getText();
     }
 
     public void navigateToSummerDresses() throws InterruptedException {
         actions.moveToElement(womenMenu).perform();
-        waitForElement(summerDressesMenu , 2);
+        waitForElement(summerDressesMenu, 2);
         actions.moveToElement(summerDressesMenu).click().perform();
     }
 
     public String summerDressesPageHeadingText() throws InterruptedException {
-        waitForElement(summerDressesPageHeading,2);
+        waitForElement(summerDressesPageHeading, 2);
         return summerDressesPageHeading.getText();
     }
 
-    public String searchCountText() throws InterruptedException {
-        waitForElement(searchListText,2);
+    public String searchCountText() {
+        waitForElement(searchListText, 2);
         return searchListText.getText();
     }
 
+    public String getPriceRange() {
+        waitForElement(priceRange, 2);
+        return priceRange.getText();
+    }
 
+
+    public void moveSlider(){
+        waitForElement(slider , 2);
+        actions.moveToElement(slider).perform();
+        actions.moveToElement(slider,25,100).click().perform();
+    }
+
+    public List<Integer> priceList(){
+        List<Integer> price = new ArrayList<Integer>();
+        priceList.forEach(e -> {
+            price.add(Integer.valueOf(e.getText()));
+        });
+        return price;
+    }
 }
+
+

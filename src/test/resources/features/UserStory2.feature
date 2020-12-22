@@ -1,4 +1,4 @@
-@FeatureAutomationTest
+#@FeatureAutomationTest
 Feature: User Story 2
   As a user i want to select summer dresses option from the navigation menu
   So that I can view an item from the summer collection

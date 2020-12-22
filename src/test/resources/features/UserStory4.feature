@@ -1,4 +1,4 @@
-@FeatureAutomationTest
+#@FeatureAutomationTest
 Feature: User Story 4
   As a user
   I want to create a new account
